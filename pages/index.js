@@ -117,8 +117,11 @@ export default function Home() {
       if (!res.ok) throw new Error(data.error);
 
       setMessages((prev) => [...prev, { role: "assistant", content: data.reply }]);
-      const mentionsForm = /fill in your details|leave your details|details below|pop your details|lead form|your details below/i.test(data.reply);
-      if (!leadCaptured && (mentionsForm || (!leadSnoozed && newCount >= 3))) {
+
+      // Trigger form if agent mentions it OR if the customer's own message asked for a quote
+      const agentMentionsForm = /fill in|details below|leave your|pop your|lead form|form below|your details|submit your|get in touch via|contact form/i.test(data.reply);
+      const customerWantsQuote = /formal quote|get a quote|request a quote|ready for a quote|send.*quote|quote now|i.m ready.*quote|quote.*please/i.test(text);
+      if (!leadCaptured && (agentMentionsForm || customerWantsQuote || (!leadSnoozed && newCount >= 3))) {
         setTimeout(() => setShowLeadForm(true), 700);
       }
     } catch {
