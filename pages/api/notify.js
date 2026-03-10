@@ -85,7 +85,7 @@ Reply directly to: ${email}
         Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Luxe Cantilever Agent <noreply@luxecantilever.com.au>",
+        from: "Luxe Cantilever Agent <onboarding@resend.dev>",
         to: ["sales@luxecantilever.com.au", "hello@benandgab.com.au"],
         reply_to: email,
         subject: `New Enquiry: ${name} — ${regionLabel}`,
