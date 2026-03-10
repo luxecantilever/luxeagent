@@ -39,6 +39,7 @@ export default function Home() {
   const [leadCaptured, setLeadCaptured] = useState(false);
   const [leadData, setLeadData] = useState({ name: "", email: "", phone: "" });
   const [leadSubmitted, setLeadSubmitted] = useState(false);
+  const [leadSnoozed, setLeadSnoozed] = useState(false);
   const bottomRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -117,7 +118,7 @@ export default function Home() {
 
       setMessages((prev) => [...prev, { role: "assistant", content: data.reply }]);
       const mentionsForm = /fill in your details|leave your details|details below|pop your details|lead form|your details below/i.test(data.reply);
-      if (!leadCaptured && (mentionsForm || newCount >= 3)) {
+      if (!leadCaptured && (mentionsForm || (!leadSnoozed && newCount >= 3))) {
         setTimeout(() => setShowLeadForm(true), 700);
       }
     } catch {
@@ -328,7 +329,7 @@ export default function Home() {
               </div>
               <input className="lx-finput" placeholder="Email address *" type="email" value={leadData.email} onChange={e => setLeadData({...leadData, email: e.target.value})} style={{marginBottom: 0}} />
               <button className="lx-fsubmit" onClick={submitLead}>Request a Formal Quote</button>
-              <button className="lx-fskip" onClick={() => { setShowLeadForm(false); setLeadCaptured(true); }}>No thanks, keep chatting</button>
+              <button className="lx-fskip" onClick={() => { setShowLeadForm(false); setLeadSnoozed(true); }}>No thanks, keep chatting</button>
             </div>
           )}
 
