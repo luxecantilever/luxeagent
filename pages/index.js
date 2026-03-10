@@ -115,15 +115,39 @@ export default function Home() {
     if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendMessage(); }
   };
 
-  const submitLead = () => {
+  const submitLead = async () => {
     if (!leadData.name || !leadData.email) return;
     setLeadSubmitted(true);
     setLeadCaptured(true);
     setShowLeadForm(false);
     setMessages((prev) => [...prev, {
       role: "assistant",
-      content: `Thank you, **${leadData.name}**! Our team will be in touch at **${leadData.email}** with a formal quote. Feel free to keep asking questions in the meantime.`,
+      content: `Thank you, **${leadData.name}**! Our team will be in touch with you shortly to follow up with a formal quote. Feel free to keep asking questions in the meantime.`,
     }]);
+
+    // Build a short summary of what was discussed from the chat history
+    const chatSummary = messages
+      .filter(m => m.role === "user")
+      .map(m => m.content.replace(/\[REGION:[^\]]+\]/g, "").trim())
+      .slice(-5) // last 5 user messages
+      .join(" | ");
+
+    // Fire notification email — runs in background, customer sees success regardless
+    try {
+      await fetch("/api/notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: leadData.name,
+          email: leadData.email,
+          phone: leadData.phone,
+          region,
+          summary: chatSummary,
+        }),
+      });
+    } catch {
+      // Silent fail — don't surface email errors to the customer
+    }
   };
 
   const render = (text) => text
