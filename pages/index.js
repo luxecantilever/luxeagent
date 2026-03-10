@@ -33,6 +33,7 @@ export default function Home() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [region, setRegion] = useState(null);
+  const [suburb, setSuburb] = useState(null);
   const [exchangeCount, setExchangeCount] = useState(0);
   const [showLeadForm, setShowLeadForm] = useState(false);
   const [leadCaptured, setLeadCaptured] = useState(false);
@@ -44,6 +45,16 @@ export default function Home() {
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading, showLeadForm]);
+
+  const lookupSuburb = async (postcode) => {
+    try {
+      const res = await fetch(`/api/suburb?postcode=${postcode}`);
+      const data = await res.json();
+      if (data.suburb) setSuburb(data.suburb);
+    } catch {
+      // Silent fail — suburb display is non-critical
+    }
+  };
 
   const regionTag = (r) => {
     if (r === "sydney") return "[REGION: GREATER_SYDNEY]";
@@ -69,7 +80,11 @@ export default function Home() {
       const m = text.match(/\b(\d{4})\b/);
       if (m) {
         const classified = classifyPostcode(m[1]);
-        if (classified) { activeRegion = classified; setRegion(classified); }
+        if (classified) {
+          activeRegion = classified;
+          setRegion(classified);
+          lookupSuburb(m[1]); // fire suburb lookup in background
+        }
       }
     }
 
@@ -101,7 +116,10 @@ export default function Home() {
       if (!res.ok) throw new Error(data.error);
 
       setMessages((prev) => [...prev, { role: "assistant", content: data.reply }]);
-      if (!leadCaptured && newCount >= 3) setTimeout(() => setShowLeadForm(true), 700);
+      const mentionsForm = /fill in your details|leave your details|details below|pop your details|lead form|your details below/i.test(data.reply);
+      if (!leadCaptured && (mentionsForm || newCount >= 3)) {
+        setTimeout(() => setShowLeadForm(true), 700);
+      }
     } catch {
       setMessages((prev) => [...prev, {
         role: "assistant",
@@ -142,6 +160,7 @@ export default function Home() {
           email: leadData.email,
           phone: leadData.phone,
           region,
+          suburb,
           summary: chatSummary,
         }),
       });
@@ -256,7 +275,9 @@ export default function Home() {
             <div className="lx-tagline">
               <span>Pricing & Design Assistant · 2026</span>
               {region && (
-                <span className="lx-region-pill">📍 {regionLabel(region)}</span>
+                <span className="lx-region-pill">
+                  📍 {suburb ? `${suburb} · ${regionLabel(region)}` : regionLabel(region)}
+                </span>
               )}
             </div>
           </div>

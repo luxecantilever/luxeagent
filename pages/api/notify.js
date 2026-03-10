@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { name, email, phone, region, summary } = req.body;
+  const { name, email, phone, region, suburb, summary } = req.body;
 
   if (!name || !email) {
     return res.status(400).json({ error: "Missing required fields" });
@@ -43,7 +43,7 @@ export default async function handler(req, res) {
           </tr>
           <tr style="border-bottom: 1px solid #f0f0f0;">
             <td style="padding: 10px 0; color: #888;">Region</td>
-            <td style="padding: 10px 0; color: #1a1a1a;">${regionLabel}</td>
+            <td style="padding: 10px 0; color: #1a1a1a;">${suburb ? `${suburb} · ` : ""}${regionLabel}</td>
           </tr>
           ${summary ? `
           <tr>
