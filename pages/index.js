@@ -40,6 +40,7 @@ export default function Home() {
   const [leadData, setLeadData] = useState({ name: "", email: "", phone: "", address: "" });
   const [leadSubmitted, setLeadSubmitted] = useState(false);
   const [leadSnoozed, setLeadSnoozed] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
   const bottomRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -138,7 +139,13 @@ export default function Home() {
   };
 
   const submitLead = async () => {
-    if (!leadData.name || !leadData.email || !leadData.phone) return;
+    const errors = {};
+    if (!leadData.name) errors.name = true;
+    if (!leadData.email) errors.email = true;
+    if (!leadData.phone) errors.phone = true;
+    if (!leadData.address) errors.address = true;
+    if (Object.keys(errors).length > 0) { setFormErrors(errors); return; }
+    setFormErrors({});
     setLeadSubmitted(true);
     setLeadCaptured(true);
     setShowLeadForm(false);
@@ -328,11 +335,22 @@ export default function Home() {
               <div className="lx-lead-title">Get a Formal Quote</div>
               <div className="lx-lead-sub">Leave your details and our team will follow up with exact pricing.</div>
               <div className="lx-lead-row">
-                <input className="lx-finput" placeholder="Your name *" value={leadData.name} onChange={e => setLeadData({...leadData, name: e.target.value})} />
-                <input className="lx-finput" placeholder="Phone *" value={leadData.phone} onChange={e => setLeadData({...leadData, phone: e.target.value})} />
+                <input className="lx-finput" placeholder="Your name *" value={leadData.name}
+                  style={formErrors.name ? {borderColor:"#c0392b"} : {}}
+                  onChange={e => { setLeadData({...leadData, name: e.target.value}); setFormErrors(p => ({...p, name: false})); }} />
+                <input className="lx-finput" placeholder="Phone *" value={leadData.phone}
+                  style={formErrors.phone ? {borderColor:"#c0392b"} : {}}
+                  onChange={e => { setLeadData({...leadData, phone: e.target.value}); setFormErrors(p => ({...p, phone: false})); }} />
               </div>
-              <input className="lx-finput" placeholder="Email address *" type="email" value={leadData.email} onChange={e => setLeadData({...leadData, email: e.target.value})} />
-              <input className="lx-finput" placeholder="Installation address (optional)" value={leadData.address} onChange={e => setLeadData({...leadData, address: e.target.value})} style={{marginBottom: 0}} />
+              <input className="lx-finput" placeholder="Email address *" type="email" value={leadData.email}
+                style={formErrors.email ? {borderColor:"#c0392b"} : {}}
+                onChange={e => { setLeadData({...leadData, email: e.target.value}); setFormErrors(p => ({...p, email: false})); }} />
+              <input className="lx-finput" placeholder="Installation address *" value={leadData.address}
+                style={{marginBottom: 0, ...(formErrors.address ? {borderColor:"#c0392b"} : {})}}
+                onChange={e => { setLeadData({...leadData, address: e.target.value}); setFormErrors(p => ({...p, address: false})); }} />
+              {Object.values(formErrors).some(Boolean) && (
+                <div style={{fontSize:"11px", color:"#c0392b", marginTop:"6px"}}>Please fill in all required fields marked with *</div>
+              )}
               <button className="lx-fsubmit" onClick={submitLead}>Request a Formal Quote</button>
               <button className="lx-fskip" onClick={() => { setShowLeadForm(false); setLeadSnoozed(true); }}>No thanks, keep chatting</button>
             </div>
