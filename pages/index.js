@@ -198,20 +198,20 @@ export default function Home() {
 
       <style>{`
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html, body { height: 100%; background: #f0ede8; font-family: 'Montserrat', sans-serif; }
+        html, body { height: 100%; overflow: hidden; background: #f0ede8; font-family: 'Montserrat', sans-serif; }
 
-        .lx-wrap { height: 100%; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 16px; }
+        .lx-wrap { height: 100%; display: flex; align-items: center; justify-content: center; padding: 16px; }
 
         .lx-card { width: 100%; max-width: 680px; background: #ffffff; border: 1px solid #e2ddd8; display: flex; flex-direction: column; height: 92vh; max-height: 760px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06); }
 
         @media (max-width: 600px) {
-          html, body { background: #ffffff; }
-          .lx-wrap { padding: 0; align-items: stretch; min-height: 100%; height: 100%; }
-          .lx-card { height: 100%; max-height: none; border: none; box-shadow: none; border-radius: 0; }
+          html, body { background: #ffffff; overflow: hidden; }
+          .lx-wrap { padding: 0; height: 100%; width: 100%; }
+          .lx-card { height: 100%; max-height: none; width: 100%; border: none; box-shadow: none; border-radius: 0; }
           .lx-header { padding: 12px 16px 10px; }
           .lx-header-top { margin-bottom: 0; }
           .lx-tagline { display: none; }
-          .lx-msgs { padding: 14px 16px; gap: 12px; }
+          .lx-msgs { padding: 14px 16px; gap: 12px; overflow-y: auto; -webkit-overflow-scrolling: touch; }
           .lx-quickbar { padding: 0 16px 12px; gap: 6px; }
           .lx-qbtn { font-size: 11px; padding: 6px 11px; }
           .lx-inputbar { padding: 10px 12px 12px; }
