@@ -23,9 +23,8 @@ const WELCOME = {
 
 const QUICK_PROMPTS = [
   "What's the price for a 4x3m pergola?",
-  "Which model suits a carport?",
   "Can I bolt it to an existing slab?",
-  "What's included in the installed price?",
+  "What's included in the supply price?",
 ];
 
 export default function Home() {
@@ -203,7 +202,17 @@ export default function Home() {
 
         .lx-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 16px; }
 
-        .lx-card { width: 100%; max-width: 680px; background: #ffffff; border: 1px solid #e2ddd8; display: flex; flex-direction: column; height: 92vh; max-height: 860px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06); }
+        .lx-card { width: 100%; max-width: 680px; background: #ffffff; border: 1px solid #e2ddd8; display: flex; flex-direction: column; height: 92vh; max-height: 760px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06); }
+
+        @media (max-width: 480px) {
+          .lx-wrap { padding: 0; align-items: stretch; }
+          .lx-card { height: 100vh; max-height: 100vh; border: none; box-shadow: none; }
+          .lx-header { padding: 14px 16px 12px; }
+          .lx-msgs { padding: 16px; gap: 14px; }
+          .lx-inputbar { padding: 10px 12px; }
+          .lx-lead { padding: 14px 16px; }
+          .lx-bubble { max-width: 88%; font-size: 13px; }
+        }
 
         .lx-header { padding: 20px 28px 16px; border-bottom: 1px solid #ece8e2; background: #ffffff; }
         .lx-header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
