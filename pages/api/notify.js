@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { name, email, phone, region, suburb, summary } = req.body;
+  const { name, email, phone, address, region, suburb, summary } = req.body;
 
   if (!name || !email) {
     return res.status(400).json({ error: "Missing required fields" });
@@ -42,6 +42,10 @@ export default async function handler(req, res) {
             <td style="padding: 10px 0; color: #1a1a1a;">${phone || "Not provided"}</td>
           </tr>
           <tr style="border-bottom: 1px solid #f0f0f0;">
+            <td style="padding: 10px 0; color: #888;">Address</td>
+            <td style="padding: 10px 0; color: #1a1a1a;">${address || "Not provided"}</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #f0f0f0;">
             <td style="padding: 10px 0; color: #888;">Region</td>
             <td style="padding: 10px 0; color: #1a1a1a;">${suburb ? `${suburb} · ` : ""}${regionLabel}</td>
           </tr>
@@ -71,6 +75,7 @@ New Enquiry from Luxe Cantilever Pricing Assistant
 Name: ${name}
 Email: ${email}
 Phone: ${phone || "Not provided"}
+Address: ${address || "Not provided"}
 Region: ${regionLabel}
 ${summary ? `Chat summary: ${summary}` : ""}
 

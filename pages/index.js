@@ -37,7 +37,7 @@ export default function Home() {
   const [exchangeCount, setExchangeCount] = useState(0);
   const [showLeadForm, setShowLeadForm] = useState(false);
   const [leadCaptured, setLeadCaptured] = useState(false);
-  const [leadData, setLeadData] = useState({ name: "", email: "", phone: "" });
+  const [leadData, setLeadData] = useState({ name: "", email: "", phone: "", address: "" });
   const [leadSubmitted, setLeadSubmitted] = useState(false);
   const [leadSnoozed, setLeadSnoozed] = useState(false);
   const bottomRef = useRef(null);
@@ -138,7 +138,7 @@ export default function Home() {
   };
 
   const submitLead = async () => {
-    if (!leadData.name || !leadData.email) return;
+    if (!leadData.name || !leadData.email || !leadData.phone) return;
     setLeadSubmitted(true);
     setLeadCaptured(true);
     setShowLeadForm(false);
@@ -163,6 +163,7 @@ export default function Home() {
           name: leadData.name,
           email: leadData.email,
           phone: leadData.phone,
+          address: leadData.address,
           region,
           suburb,
           summary: chatSummary,
@@ -328,9 +329,10 @@ export default function Home() {
               <div className="lx-lead-sub">Leave your details and our team will follow up with exact pricing.</div>
               <div className="lx-lead-row">
                 <input className="lx-finput" placeholder="Your name *" value={leadData.name} onChange={e => setLeadData({...leadData, name: e.target.value})} />
-                <input className="lx-finput" placeholder="Phone (optional)" value={leadData.phone} onChange={e => setLeadData({...leadData, phone: e.target.value})} />
+                <input className="lx-finput" placeholder="Phone *" value={leadData.phone} onChange={e => setLeadData({...leadData, phone: e.target.value})} />
               </div>
-              <input className="lx-finput" placeholder="Email address *" type="email" value={leadData.email} onChange={e => setLeadData({...leadData, email: e.target.value})} style={{marginBottom: 0}} />
+              <input className="lx-finput" placeholder="Email address *" type="email" value={leadData.email} onChange={e => setLeadData({...leadData, email: e.target.value})} />
+              <input className="lx-finput" placeholder="Installation address (optional)" value={leadData.address} onChange={e => setLeadData({...leadData, address: e.target.value})} style={{marginBottom: 0}} />
               <button className="lx-fsubmit" onClick={submitLead}>Request a Formal Quote</button>
               <button className="lx-fskip" onClick={() => { setShowLeadForm(false); setLeadSnoozed(true); }}>No thanks, keep chatting</button>
             </div>
