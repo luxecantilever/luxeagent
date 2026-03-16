@@ -206,21 +206,21 @@ export default function Home() {
 
         @media (max-width: 600px) {
           html, body { background: #ffffff; height: 100%; }
-          .lx-wrap { padding: 0; height: 100%; width: 100%; align-items: stretch; }
-          .lx-card { height: 100%; max-height: none; min-height: 0; width: 100%; border: none; box-shadow: none; }
-          .lx-header { padding: 12px 16px 10px; }
+          .lx-wrap { padding: 0; height: 100dvh; width: 100%; align-items: stretch; }
+          .lx-card { height: 100dvh; max-height: none; min-height: 0; width: 100%; border: none; box-shadow: none; }
+          .lx-header { padding: 12px 16px 10px; flex-shrink: 0; }
           .lx-header-top { margin-bottom: 0; }
           .lx-tagline { display: none; }
-          .lx-msgs { padding: 14px 16px; gap: 12px; }
-          .lx-quickbar { padding: 0 16px 12px; gap: 6px; }
+          .lx-msgs { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 14px 16px; gap: 12px; }
+          .lx-quickbar { flex-shrink: 0; padding: 0 16px 12px; gap: 6px; }
           .lx-qbtn { font-size: 11px; padding: 6px 11px; }
-          .lx-inputbar { padding: 10px 12px 12px; }
+          .lx-inputbar { flex-shrink: 0; padding: 10px 12px 12px; }
           .lx-bubble { max-width: 88%; font-size: 13px; }
-          .lx-lead { margin: 0 12px 12px; padding: 14px 16px; }
-          .lx-footer { padding: 6px; font-size: 9px; }
+          .lx-lead { flex-shrink: 0; margin: 0 12px 12px; padding: 14px 16px; }
+          .lx-footer { flex-shrink: 0; padding: 6px; font-size: 9px; }
         }
 
-        .lx-header { padding: 20px 28px 16px; border-bottom: 1px solid #ece8e2; background: #ffffff; }
+        .lx-header { padding: 20px 28px 16px; border-bottom: 1px solid #ece8e2; background: #ffffff; flex-shrink: 0; }
         .lx-header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
         .lx-logo { height: 32px; width: auto; object-fit: contain; object-position: left; }
         .lx-status { display: flex; align-items: center; gap: 6px; font-size: 10px; color: #5a8a4e; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
@@ -269,7 +269,7 @@ export default function Home() {
         .lx-fskip { display: block; width: 100%; text-align: center; background: none; border: none; color: #aaa8a3; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; padding: 8px 0 0; font-family: 'Montserrat', sans-serif; transition: color 0.2s; }
         .lx-fskip:hover { color: #6a6560; }
 
-        .lx-inputbar { padding: 14px 28px 18px; border-top: 1px solid #ece8e2; background: #ffffff; display: flex; gap: 10px; align-items: flex-end; }
+        .lx-inputbar { flex-shrink: 0; padding: 14px 28px 18px; border-top: 1px solid #ece8e2; background: #ffffff; display: flex; gap: 10px; align-items: flex-end; }
         .lx-textarea { flex: 1; background: #fdfcfb; border: 1px solid #ddd9d3; color: #2a2520; padding: 11px 15px; font-size: 13.5px; font-family: 'Montserrat', sans-serif; font-weight: 400; outline: none; resize: none; min-height: 44px; max-height: 110px; line-height: 1.5; transition: border-color 0.2s; }
         .lx-textarea:focus { border-color: #1a1a1a; }
         .lx-textarea::placeholder { color: #b0ada8; }
@@ -278,7 +278,7 @@ export default function Home() {
         .lx-send:active { transform: scale(0.95); }
         .lx-send:disabled { background: #ccc; cursor: not-allowed; }
 
-        .lx-footer { text-align: center; padding: 8px; font-size: 9.5px; color: #b8b5b0; letter-spacing: 0.1em; text-transform: uppercase; border-top: 1px solid #ece8e2; background: #ffffff; }
+        .lx-footer { flex-shrink: 0; text-align: center; padding: 8px; font-size: 9.5px; color: #b8b5b0; letter-spacing: 0.1em; text-transform: uppercase; border-top: 1px solid #ece8e2; background: #ffffff; }
       `}</style>
 
       <div className="lx-wrap">
