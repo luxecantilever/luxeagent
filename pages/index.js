@@ -198,20 +198,20 @@ export default function Home() {
 
       <style>{`
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html, body { height: 100%; overflow: hidden; background: #f0ede8; font-family: 'Montserrat', sans-serif; }
+        html, body { height: 100%; background: #f0ede8; font-family: 'Montserrat', sans-serif; }
 
         .lx-wrap { height: 100%; display: flex; align-items: center; justify-content: center; padding: 16px; }
 
-        .lx-card { width: 100%; max-width: 680px; background: #ffffff; border: 1px solid #e2ddd8; display: flex; flex-direction: column; height: 92vh; max-height: 760px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06); }
+        .lx-card { width: 100%; max-width: 680px; background: #ffffff; border: 1px solid #e2ddd8; display: flex; flex-direction: column; height: 92vh; max-height: 760px; min-height: 0; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06); }
 
         @media (max-width: 600px) {
-          html, body { background: #ffffff; overflow: hidden; }
-          .lx-wrap { padding: 0; height: 100%; width: 100%; }
-          .lx-card { height: 100%; max-height: none; width: 100%; border: none; box-shadow: none; border-radius: 0; }
+          html, body { background: #ffffff; height: 100%; }
+          .lx-wrap { padding: 0; height: 100%; width: 100%; align-items: stretch; }
+          .lx-card { height: 100%; max-height: none; min-height: 0; width: 100%; border: none; box-shadow: none; }
           .lx-header { padding: 12px 16px 10px; }
           .lx-header-top { margin-bottom: 0; }
           .lx-tagline { display: none; }
-          .lx-msgs { padding: 14px 16px; gap: 12px; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+          .lx-msgs { padding: 14px 16px; gap: 12px; }
           .lx-quickbar { padding: 0 16px 12px; gap: 6px; }
           .lx-qbtn { font-size: 11px; padding: 6px 11px; }
           .lx-inputbar { padding: 10px 12px 12px; }
@@ -230,7 +230,7 @@ export default function Home() {
         .lx-region-pill { display: inline-flex; align-items: center; gap: 5px; background: #f5f2ee; border: 1px solid #ddd9d3; padding: 3px 10px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #5a5550; font-weight: 500; animation: fadeUp 0.35s ease; }
         @keyframes fadeUp { from{opacity:0;transform:translateY(4px)} to{opacity:1;transform:translateY(0)} }
 
-        .lx-msgs { flex: 1; overflow-y: auto; padding: 24px 28px; display: flex; flex-direction: column; gap: 20px; background: #fdfcfb; scrollbar-width: thin; scrollbar-color: #ddd8d2 transparent; }
+        .lx-msgs { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 24px 28px; display: flex; flex-direction: column; gap: 20px; background: #fdfcfb; scrollbar-width: thin; scrollbar-color: #ddd8d2 transparent; }
         .lx-msgs::-webkit-scrollbar { width: 3px; }
         .lx-msgs::-webkit-scrollbar-thumb { background: #ddd8d2; }
 
