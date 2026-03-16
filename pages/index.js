@@ -10,6 +10,7 @@ function classifyPostcode(pc) {
   for (const [lo, hi] of sydneyRanges) { if (n >= lo && n <= hi) return "sydney"; }
   if (sydneyExtras.includes(n)) return "sydney";
   if ((n >= 2250 && n <= 2554) || (n >= 2575 && n <= 2739) || (n >= 2787 && n <= 2999)) return "regional_nsw";
+  if (n >= 4000 && n <= 4999) return "queensland";
   if (n >= 1000 && n <= 9999) return "interstate";
   return null;
 }
@@ -60,6 +61,7 @@ export default function Home() {
   const regionTag = (r) => {
     if (r === "sydney") return "[REGION: GREATER_SYDNEY]";
     if (r === "regional_nsw") return "[REGION: REGIONAL_NSW]";
+    if (r === "queensland") return "[REGION: QUEENSLAND]";
     if (r === "interstate") return "[REGION: INTERSTATE]";
     return "[REGION: UNKNOWN]";
   };
@@ -67,6 +69,7 @@ export default function Home() {
   const regionLabel = (r) => {
     if (r === "sydney") return "Greater Sydney";
     if (r === "regional_nsw") return "Regional NSW";
+    if (r === "queensland") return "Queensland";
     if (r === "interstate") return "Interstate";
     return "";
   };
