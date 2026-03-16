@@ -16,6 +16,7 @@ export default async function handler(req, res) {
   const regionLabel = {
     sydney: "Greater Sydney",
     regional_nsw: "Regional NSW",
+    queensland: "Queensland",
     interstate: "Interstate",
   }[region] || "Unknown";
 
