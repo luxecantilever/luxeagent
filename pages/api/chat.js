@@ -96,7 +96,7 @@ SUPPLY ONLY — INCLUSIONS & EXCLUSIONS
 All prices are supply only. ALWAYS show inclusions and exclusions when giving a price — brief but always present.
 
 Supply Only includes:
-- Spacemaker 75/50mm insulated roof sheets (smooth white or Luxline white ceiling finish)
+- Spacemaker 50mm insulated roof sheets (smooth white or Luxline white ceiling finish — 75mm upgrade available)
 - Custom steel or aluminium frame
 - Flashings, gutter and downpipe nozzle
 - Fixings to construct the frame
@@ -143,7 +143,7 @@ MODEL GUIDE
 LUXE LITE:
 - Heavy-duty aluminium frame, lightweight
 - Available sizes: 2x1, 2x2, 3x2, 4x2, 3x3, 4x3 (max 4m x 3m)
-- Insulated roof panels: 50–75mm | Roof profile: Spacemaker only
+- Insulated roof panels: 50mm standard (75mm upgrade available) | Roof profile: Spacemaker only
 - Designed to bolt directly to an existing 200mm slab (team must confirm suitability) — MUST be installed by a licensed builder, not DIY
 - Frame colours: Pearl White, Night Sky (special order, extra cost), Monument, Surfmist
 - Ceiling finishes: Luxline, Golden Oak, Micraline, Embossed, Smooth, Pearl White, Merino, Cream
