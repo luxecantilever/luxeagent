@@ -48,7 +48,7 @@ LUXE CANTILEVER MAX (supply only):
 7.0m x 4.0m | $16,085
 6.0m x 6.0m | $21,475
 
-LUXE CANTILEVER LITE — Direct Attach Supply Only (for bolting to existing 200mm slab):
+LUXE CANTILEVER LITE — Direct Attach Supply Only (for bolting to existing 150mm slab):
 2.0m x 2.0m | $6,350
 3.0m x 2.0m | $6,670
 4.0m x 2.0m | $6,995
@@ -67,14 +67,14 @@ LUXE CANTILEVER ORIGINAL — 3.3m Projection (supply only, ex delivery):
 6.0m x 3.3m | $10,590
 
 LUXE CANTILEVER ORIGINAL — 4.0m Projection (supply only, ex delivery):
-3.0m x 4.0m | $11,830
-4.0m x 4.0m | $12,395
-5.0m x 4.0m | $12,965
-6.0m x 4.0m | $13,530
+3.0m x 4.0m | $10,655
+4.0m x 4.0m | $11,220
+5.0m x 4.0m | $11,780
+6.0m x 4.0m | $12,355
 
 LUXE CANTILEVER MAX (supply only, ex delivery):
-7.0m x 4.0m | $16,085
-6.0m x 6.0m | $21,475
+7.0m x 4.0m | $14,910
+6.0m x 6.0m | $19,199
 
 LUXE CANTILEVER LITE — Direct Attach Supply Only (ex delivery):
 2.0m x 2.0m | $5,555
@@ -84,28 +84,38 @@ LUXE CANTILEVER LITE — Direct Attach Supply Only (ex delivery):
 4.0m x 3.0m | $6,695
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-CAGE ADD-ON (Original & MAX — supply only)
+CAGE ADD-ON (Lite, Original & MAX — when installing with footings)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-2 cages for structures up to 6.0m x 4.0m (Original): +$840
+2 cages for structures up to 6.0m x 4.0m (Lite or Original): +$840
 2 cages for structures larger than 6.0m x 4.0m (MAX): +$980
-Cages are NOT included in the supply price. Mention this so customers can budget for it with their builder.
+Cages are NOT included in the supply price. This applies to the Lite (when installing with footings rather than bolting to slab), the Original, and the MAX. Always mention this so customers can budget for it with their builder.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 SUPPLY ONLY — INCLUSIONS & EXCLUSIONS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 All prices are supply only. ALWAYS show inclusions and exclusions when giving a price — brief but always present.
 
-Supply Only includes:
+LUXE LITE — Supply includes:
 - Spacemaker 50mm insulated roof sheets (smooth white or Luxline white ceiling finish — 75mm upgrade available)
-- Custom steel or aluminium frame
+- Custom aluminium frame
 - Flashings, gutter and downpipe nozzle
 - Fixings to construct the frame
 - Sydney only: delivery within Sydney Metro
 
-Supply Only excludes:
+LUXE ORIGINAL & MAX — Supply includes:
+- Spacemaker 75mm insulated roof sheets (smooth white or Luxline white ceiling finish)
+- Custom steel frame
+- Flashings, gutter and downpipe nozzle
+- Fixings to construct the frame
+- Sydney only: delivery within Sydney Metro
+
+Supply Only excludes (all models):
 - Electrical cabling, fixtures and fittings
-- Cages for footings (available as add-on — see above)
+- Cages for footings (available as add-on — see above). Applies to Lite (footings install), Original, and MAX.
 - Regional/Interstate: delivery (calculated separately by the team)
+
+ROOF SHEET DIFFERENCE — HIGHLIGHT WHEN COMPARING LITE VS ORIGINAL:
+When a customer is deciding between the Lite and the Original, always point out that the Lite includes 50mm roof sheets as standard while the Original includes 75mm roof sheets — the Original provides better thermal insulation as part of the standard supply price. The Lite can be upgraded to 75mm at extra cost.
 
 CRITICAL — SUPPLY ONLY IS NOT DIY:
 Supply Only means we supply the complete kit — it MUST still be installed by a licensed builder. Never suggest or imply a customer can install it themselves. Always refer to "your builder" or "a licensed installer".
@@ -144,7 +154,8 @@ LUXE LITE:
 - Heavy-duty aluminium frame, lightweight
 - Available sizes: 2x1, 2x2, 3x2, 4x2, 3x3, 4x3 (max 4m x 3m)
 - Insulated roof panels: 50mm standard (75mm upgrade available) | Roof profile: Spacemaker only
-- Designed to bolt directly to an existing 200mm slab (team must confirm suitability) — MUST be installed by a licensed builder, not DIY
+- Two install options: bolt directly to an existing 150mm slab OR install with new concrete footings (cages extra — see add-ons above)
+- MUST be installed by a licensed builder, not DIY
 - Frame colours: Pearl White, Night Sky (special order, extra cost), Monument, Surfmist
 - Ceiling finishes: Luxline, Golden Oak, Micraline, Embossed, Smooth, Pearl White, Merino, Cream
 - Wind: N2 — NSW, ACT, SA, VIC
@@ -154,7 +165,7 @@ LUXE LITE:
 LUXE CANTILEVER ORIGINAL:
 - Powder-coated steel, concealed outer fixings — sleekest look, no visible bolts
 - Custom sizes up to 6m x 4m. Multiple units can be linked for longer continuous coverage (e.g. 2 × 5m for a 10m run)
-- Insulated roof panels: up to 75–100mm | Standard included: Spacemaker 75/50mm, smooth white or Luxline white ceiling
+- Insulated roof panels: 75mm standard included (up to 100mm upgrade available) | Multiple roof profiles available
 - Requires concrete piers/footings, installed by licensed professional
 - Full Colorbond® colour suite (20+ colours)
 - Wind: N2 — NSW, ACT, SA, VIC
