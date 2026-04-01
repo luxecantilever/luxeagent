@@ -33,27 +33,27 @@ If they say NO (standard wind zone):
 Sydney supply prices INCLUDE delivery within Sydney Metro.
 
 LUXE CANTILEVER ORIGINAL — 3.3m Projection (supply only):
-3.0m x 3.3m | $10,300
-4.0m x 3.3m | $10,790
-5.0m x 3.3m | $11,280
-6.0m x 3.3m | $11,770
+3.0m x 3.3m | $11,444
+4.0m x 3.3m | $11,989
+5.0m x 3.3m | $12,533
+6.0m x 3.3m | $13,078
 
 LUXE CANTILEVER ORIGINAL — 4.0m Projection (supply only):
-3.0m x 4.0m | $11,830
-4.0m x 4.0m | $12,395
-5.0m x 4.0m | $12,965
-6.0m x 4.0m | $13,530
+3.0m x 4.0m | $13,144
+4.0m x 4.0m | $13,772
+5.0m x 4.0m | $14,406
+6.0m x 4.0m | $15,033
 
 LUXE CANTILEVER MAX (supply only):
-7.0m x 4.0m | $16,085
-6.0m x 6.0m | $21,475
+7.0m x 4.0m | $17,872
+6.0m x 6.0m | $23,861
 
 LUXE CANTILEVER LITE — Direct Attach Supply Only (for bolting to existing 150mm slab):
-2.0m x 2.0m | $6,350
-3.0m x 2.0m | $6,670
-4.0m x 2.0m | $6,995
-3.0m x 3.0m | $7,060
-4.0m x 3.0m | $7,490
+2.0m x 2.0m | $7,056
+3.0m x 2.0m | $7,411
+4.0m x 2.0m | $7,772
+3.0m x 3.0m | $7,844
+4.0m x 3.0m | $8,322
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 2026 PRICING — REGIONAL NSW & INTERSTATE (all prices + GST, supply only, delivery NOT included)
@@ -61,27 +61,27 @@ LUXE CANTILEVER LITE — Direct Attach Supply Only (for bolting to existing 150m
 CRITICAL: Delivery is NOT included in regional/interstate prices. NEVER quote or estimate delivery — say delivery is calculated separately and the team will confirm.
 
 LUXE CANTILEVER ORIGINAL — 3.3m Projection (supply only, ex delivery):
-3.0m x 3.3m | $9,125
-4.0m x 3.3m | $9,615
-5.0m x 3.3m | $10,100
-6.0m x 3.3m | $10,590
+3.0m x 3.3m | $10,139
+4.0m x 3.3m | $10,683
+5.0m x 3.3m | $11,222
+6.0m x 3.3m | $11,767
 
 LUXE CANTILEVER ORIGINAL — 4.0m Projection (supply only, ex delivery):
-3.0m x 4.0m | $10,655
-4.0m x 4.0m | $11,220
-5.0m x 4.0m | $11,780
-6.0m x 4.0m | $12,355
+3.0m x 4.0m | $11,839
+4.0m x 4.0m | $12,467
+5.0m x 4.0m | $13,089
+6.0m x 4.0m | $13,728
 
 LUXE CANTILEVER MAX (supply only, ex delivery):
-7.0m x 4.0m | $14,910
-6.0m x 6.0m | $19,199
+7.0m x 4.0m | $16,567
+6.0m x 6.0m | $21,332
 
 LUXE CANTILEVER LITE — Direct Attach Supply Only (ex delivery):
-2.0m x 2.0m | $5,555
-3.0m x 2.0m | $5,875
-4.0m x 2.0m | $6,200
-3.0m x 3.0m | $6,270
-4.0m x 3.0m | $6,695
+2.0m x 2.0m | $6,172
+3.0m x 2.0m | $6,528
+4.0m x 2.0m | $6,889
+3.0m x 3.0m | $6,967
+4.0m x 3.0m | $7,439
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CAGE ADD-ON (Lite, Original & MAX — when installing with footings)
