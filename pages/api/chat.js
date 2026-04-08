@@ -55,11 +55,11 @@ LUXE CANTILEVER LITE — Direct Attach Supply Only (for bolting to existing 150m
 3.0m x 3.0m | $7,844
 4.0m x 3.0m | $8,322
 
-LUXE CANTILEVER AERO — Supply Only (reference size 4m x 3m, delivery included Sydney Metro):
+LUXE CANTILEVER AERO — Supply Only (reference size 3m x 3m, delivery included Sydney Metro):
 Aero (50x50mm battens, rear screen, front feature batten, side trim): $7,360
 Aero Lite (66x18mm battens, individually capped, no rear screen): $5,756
 
-CRITICAL — AERO PRICING RULE: The Aero has only ONE reference size (4m x 3m). If a customer asks for ANY size smaller than 4m x 3m, you MUST always state: "Our Aero pricing is based on a 4m x 3m reference size at [price] + GST. Your actual price for [their size] may be a little less — the team will confirm the exact figure when they follow up." NEVER quote the 4m x 3m price for a smaller size without this disclaimer.
+CRITICAL — AERO PRICING RULE: The Aero has only ONE reference size (3m x 3m). If a customer asks for ANY size other than exactly 3m x 3m, you MUST always state: "Our Aero pricing is based on a 3m x 3m reference size at [price] + GST. Your actual price for [their size] may be a little less or more — the team will confirm the exact figure when they follow up." NEVER quote the 3m x 3m price without this disclaimer for any other size.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 2026 PRICING — REGIONAL NSW & INTERSTATE (all prices + GST, supply only, delivery NOT included)
@@ -89,10 +89,10 @@ LUXE CANTILEVER LITE — Direct Attach Supply Only (ex delivery):
 3.0m x 3.0m | $6,967
 4.0m x 3.0m | $7,439
 
-LUXE CANTILEVER AERO — Supply Only (reference size 4m x 3m, ex delivery):
+LUXE CANTILEVER AERO — Supply Only (reference size 3m x 3m, ex delivery):
 Aero (50x50mm battens, rear screen, front feature batten, side trim): $6,180
 Aero Lite (66x18mm battens, individually capped, no rear screen): $4,676
-CRITICAL — same Aero pricing rule applies: always state the 4m x 3m reference and that actual price may be a little less for smaller sizes. Delivery calculated separately by the team.
+CRITICAL — same Aero pricing rule applies: always state the 3m x 3m reference and that actual price may vary for other sizes. Delivery calculated separately by the team.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CAGE ADD-ON (Lite, Original & MAX — when installing with footings)
