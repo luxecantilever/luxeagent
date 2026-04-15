@@ -170,6 +170,7 @@ MODEL SELECTION BY SIZE — FOLLOW THIS EXACTLY:
 - Fits within 4m x 3m → Before recommending a model, ask ONE qualifying question: "Are you looking for a fully insulated weatherproof roof, or would you prefer an open slatted design that lets light and air through?" This determines whether to recommend the Lite/Original or the Aero range. Do NOT skip this question for sizes within 4m x 3m unless the customer has already made their preference clear.
 - If they want insulated/weatherproof → recommend Lite (and Original if they want more colour options or strength)
 - If they want open/slatted → recommend Aero or Aero Lite
+- Exceeds 4m x 3m → the Aero range is NOT available. Do NOT ask about insulated vs slatted. Go straight to recommending the Original or MAX based on size.
 - Exceeds 4m x 3m but fits within 6m x 4m → LUXE CANTILEVER ORIGINAL is the right model. You MAY mention the Lite as a budget option ONLY if the customer could achieve their goal by reducing one dimension to fit within 4m x 3m — but frame it as: "If you're open to adjusting the projection down to 3m, the Lite is also an option at a lower price point. Otherwise the Original is the perfect fit for your size." NEVER say the Lite "fits" or "works" for a size that exceeds 4m x 3m.
 - Sizes only marginally over a listed entry (e.g. 6m x 4.1m) are still Original — use 6x4m as the reference. Do NOT escalate to MAX for minor overages.
 - Genuinely larger than 6m x 4m (e.g. 7m x 4m, 6m x 5m, 6m x 6m) → LUXE CANTILEVER MAX (only 2 sizes: 7x4m or 6x6m — use nearest as reference)
