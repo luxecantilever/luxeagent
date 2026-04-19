@@ -48,6 +48,15 @@ export default function Home() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading, showLeadForm]);
 
+  // Fire Google Ads conversion when chat is opened
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", "conversion", {
+        send_to: "AW-16498371020/zKi-CPqGwZ4cEMzThLs9",
+      });
+    }
+  }, []);
+
   const lookupSuburb = async (postcode) => {
     try {
       const res = await fetch(`/api/suburb?postcode=${postcode}`);
@@ -151,6 +160,16 @@ export default function Home() {
     setLeadSubmitted(true);
     setLeadCaptured(true);
     setShowLeadForm(false);
+
+    // Fire Google Ads lead conversion
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", "conversion", {
+        send_to: "AW-16498371020/zKi-CPqGwZ4cEMzThLs9",
+        value: 1.0,
+        currency: "AUD",
+      });
+    }
+
     setMessages((prev) => [...prev, {
       role: "assistant",
       content: `Thank you, **${leadData.name}**! Our team will be in touch with you shortly to follow up with a formal quote. Feel free to keep asking questions in the meantime.`,
