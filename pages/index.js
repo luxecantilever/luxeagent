@@ -164,7 +164,7 @@ export default function Home() {
     // Fire Google Ads lead conversion
     if (typeof window !== "undefined" && typeof window.gtag === "function") {
       window.gtag("event", "conversion", {
-        send_to: "AW-16498371020/zKi-CPqGwZ4cEMzThLs9",
+        send_to: "AW-16498371020/gqVcCPia254cEMzThLs9",
         value: 1.0,
         currency: "AUD",
       });
