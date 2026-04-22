@@ -11,6 +11,7 @@ function classifyPostcode(pc) {
   if (sydneyExtras.includes(n)) return "sydney";
   if ((n >= 2250 && n <= 2554) || (n >= 2575 && n <= 2739) || (n >= 2787 && n <= 2999)) return "regional_nsw";
   if (n >= 4000 && n <= 4999) return "queensland";
+  if (n >= 6000 && n <= 6999) return "western_australia";
   if (n >= 1000 && n <= 9999) return "interstate";
   return null;
 }
@@ -71,6 +72,7 @@ export default function Home() {
     if (r === "sydney") return "[REGION: GREATER_SYDNEY]";
     if (r === "regional_nsw") return "[REGION: REGIONAL_NSW]";
     if (r === "queensland") return "[REGION: QUEENSLAND]";
+    if (r === "western_australia") return "[REGION: WESTERN_AUSTRALIA]";
     if (r === "interstate") return "[REGION: INTERSTATE]";
     return "[REGION: UNKNOWN]";
   };
@@ -79,6 +81,7 @@ export default function Home() {
     if (r === "sydney") return "Greater Sydney";
     if (r === "regional_nsw") return "Regional NSW";
     if (r === "queensland") return "Queensland";
+    if (r === "western_australia") return "Western Australia";
     if (r === "interstate") return "Interstate";
     return "";
   };
@@ -104,6 +107,17 @@ export default function Home() {
     const userMsg = { role: "user", content: text };
     const newMessages = [...messages, userMsg];
     setMessages(newMessages);
+
+    // Western Australia — not yet serviceable
+    if (activeRegion === "western_australia") {
+      setMessages((prev) => [...prev, {
+        role: "assistant",
+        content: `Thank you for your interest! Unfortunately, we're **not yet servicing Western Australia** at this point in time.\n\nWe're working hard to expand our reach and would love to get in touch with you when we do. Please leave your details below and our team will contact you as soon as we're available in your area.`,
+      }]);
+      setTimeout(() => setShowLeadForm(true), 700);
+      return;
+    }
+
     setLoading(true);
     const newCount = exchangeCount + 1;
     setExchangeCount(newCount);
@@ -172,7 +186,9 @@ export default function Home() {
 
     setMessages((prev) => [...prev, {
       role: "assistant",
-      content: `Thank you, **${leadData.name}**! Our team will be in touch with you shortly to follow up with a formal quote. Feel free to keep asking questions in the meantime.`,
+      content: region === "western_australia"
+        ? `Thank you, **${leadData.name}**! We've noted your interest. Our team will be in touch as soon as we begin servicing Western Australia — we look forward to helping you then!`
+        : `Thank you, **${leadData.name}**! Our team will be in touch with you shortly to follow up with a formal quote. Feel free to keep asking questions in the meantime.`,
     }]);
 
     // Build a short summary of what was discussed from the chat history
@@ -363,8 +379,8 @@ export default function Home() {
           {/* Lead form */}
           {showLeadForm && !leadSubmitted && (
             <div className="lx-lead">
-              <div className="lx-lead-title">Get a Formal Quote</div>
-              <div className="lx-lead-sub">Leave your details and our team will follow up with exact pricing.</div>
+              <div className="lx-lead-title">{region === "western_australia" ? "Register Your Interest" : "Get a Formal Quote"}</div>
+              <div className="lx-lead-sub">{region === "western_australia" ? "Leave your details and we'll reach out when we begin servicing Western Australia." : "Leave your details and our team will follow up with exact pricing."}</div>
               <div className="lx-lead-row">
                 <input className="lx-finput" placeholder="Your name *" value={leadData.name}
                   style={formErrors.name ? {borderColor:"#c0392b"} : {}}
@@ -382,7 +398,7 @@ export default function Home() {
               {Object.values(formErrors).some(Boolean) && (
                 <div style={{fontSize:"11px", color:"#c0392b", marginTop:"6px"}}>Please fill in all required fields marked with *</div>
               )}
-              <button className="lx-fsubmit" onClick={submitLead}>Request a Formal Quote</button>
+              <button className="lx-fsubmit" onClick={submitLead}>{region === "western_australia" ? "Register My Interest" : "Request a Formal Quote"}</button>
               <button className="lx-fskip" onClick={() => { setShowLeadForm(false); setLeadSnoozed(true); }}>No thanks, keep chatting</button>
             </div>
           )}
